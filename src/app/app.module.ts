@@ -5,7 +5,9 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { AllStarComponent } from './components/all-star.component';
 import { PlayerDetailComponent } from './components/player-detail.component';
-import { NotFoundPageComponent } from './components/not-found-page.component';
+import { PageNotFoundComponent } from './components/page-not-found.component';
+import { AppRoutingModule } from './app-routing.module';
+import { PlayersListComponent } from './components/players-list.component';
 
 
 @NgModule({
@@ -13,10 +15,12 @@ import { NotFoundPageComponent } from './components/not-found-page.component';
     AppComponent,
     AllStarComponent,
     PlayerDetailComponent,
-    NotFoundPageComponent
+    PageNotFoundComponent,
+    PlayersListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
