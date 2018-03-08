@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
@@ -8,6 +9,8 @@ import { PlayerDetailComponent } from './components/player-detail.component';
 import { PageNotFoundComponent } from './components/page-not-found.component';
 import { AppRoutingModule } from './app-routing.module';
 import { PlayersListComponent } from './components/players-list.component';
+
+import { PlayersService } from './service/players.service';
 
 
 @NgModule({
@@ -20,9 +23,10 @@ import { PlayersListComponent } from './components/players-list.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [PlayersService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

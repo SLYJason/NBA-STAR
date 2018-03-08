@@ -11,3 +11,6 @@
 <div class="container">
   <router-outlet></router-outlet>
 </div>
+<div class="container" *ngFor="let player of players">
+  {{player.team}}
+</div>
