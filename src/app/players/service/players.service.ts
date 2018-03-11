@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Players } from '../players'
+import { Player } from '../models/player.model'
 
 @Injectable()
 export class PlayersService {
@@ -8,8 +8,8 @@ export class PlayersService {
   constructor(private http: HttpClient) { }
 
   getPlayers() {
-    console.log(Players)
-    return Promise.resolve(Players);
+    console.log(Player)
+    return Promise.resolve(Player);
   }
 
   private getRequestOptions() {
