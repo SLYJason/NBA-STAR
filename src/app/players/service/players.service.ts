@@ -2,14 +2,21 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Player } from '../models/player.model'
 
+import { Observable } from 'rxjs/Observable';
+import 'rxjs/add/observable/of';
+
+import { Players } from '../../players';
+
 @Injectable()
 export class PlayersService {
+  players;
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+    this.players = Players;
+  }
 
-  getPlayers() {
-    console.log(Player)
-    return Promise.resolve(Player);
+  getPlayer(id: string) {
+    return Observable.of(this.players[Number(id)]);
   }
 
   private getRequestOptions() {
