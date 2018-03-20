@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 import { Player } from '../models/player.model';
@@ -6,13 +6,15 @@ import { Player } from '../models/player.model';
 import { PlayersService } from '../service/players.service';
 
 import { Observable } from 'rxjs/Observable';
-import 'rxjs/add/operator/switchMap';
+import { switchMap, map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-player-detail',
   template: `
+    <h4>{{ (player$ | async).name }} {{ (player$ | async).team }}</h4>
+    <p>{{ (player$ | async).description }}</p>
     <p>
-      player-detail works!
+      <button class="btn btn-warning" (click)="gotoPlayers($event)">Back</button>
     </p>
   `,
   styles: []
@@ -22,11 +24,19 @@ export class PlayerDetailComponent implements OnInit {
 
   constructor(private route: ActivatedRoute, 
     private router: Router,
-    private playersService: PlayersService) { }
+    private playersService: PlayersService) {}
 
   ngOnInit() {
-    this.route.paramMap.switchMap((params: ParamMap) => this.playersService.getPlayer(params.get('id')))
-    .subscribe(val => console.log(val));
+    this.player$ = this.route.paramMap.pipe(
+      switchMap((params: ParamMap) => this.playersService.getPlayer(params.get('id')))
+    );
+
+    // Second way to get player info
+    // const id = this.route.snapshot.paramMap.get('id');
+    // this.player$ = this.playersService.getPlayer(id);
+  }
+  gotoPlayers(val) {
+    this.router.navigate(['/players-list'])
   }
 
 }

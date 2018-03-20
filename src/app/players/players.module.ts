@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule }   from '@angular/common';
 
 import { AllStarComponent } from './components/all-star.component';
 import { PlayerDetailComponent } from './components/player-detail.component';
@@ -10,6 +11,7 @@ import { PlayersService } from './service/players.service';
 
 @NgModule({
     imports: [
+      CommonModule,
       PlayersRoutingModule
     ],
     declarations: [
