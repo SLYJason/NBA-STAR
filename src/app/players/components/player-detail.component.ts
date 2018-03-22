@@ -21,6 +21,7 @@ import { switchMap, map } from 'rxjs/operators';
 })
 export class PlayerDetailComponent implements OnInit {
   player$: Observable<Player>;
+  playerId: string;
 
   constructor(private route: ActivatedRoute, 
     private router: Router,
@@ -28,15 +29,19 @@ export class PlayerDetailComponent implements OnInit {
 
   ngOnInit() {
     this.player$ = this.route.paramMap.pipe(
-      switchMap((params: ParamMap) => this.playersService.getPlayer(params.get('id')))
+      switchMap((params: ParamMap) => {
+        this.playerId = params.get('id');
+        return this.playersService.getPlayer(this.playerId)
+      })
     );
 
     // Second way to get player info
     // const id = this.route.snapshot.paramMap.get('id');
     // this.player$ = this.playersService.getPlayer(id);
   }
-  gotoPlayers(val) {
-    this.router.navigate(['/players-list'])
+  gotoPlayers(player) {
+    const playerId = player ? player.id : null;
+    this.router.navigate(['/players-list', { id: this.playerId}])
   }
 
 }

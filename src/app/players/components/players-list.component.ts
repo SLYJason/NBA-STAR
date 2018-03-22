@@ -1,17 +1,26 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { Player } from '../models/player.model';
 import { PlayersService } from '../service/players.service';
+
+import { switchMap } from 'rxjs/operators';
+import { of } from 'rxjs/observable/of';
+import 'rxjs/Observable';
 
 @Component({
   selector: 'app-players-list',
   template: `
     <p>NBA Players List</p>
     <ul>
-      <li *ngFor="let player of (players$ | async); index as i">
-       <button class="btn btn-primary" [routerLink]="['/player', i]">
-       {{player.name}}
+      <li *ngFor="let player of (players$ | async); index as index">
+       <button
+          class="btn btn-primary" 
+          [routerLink]="['/player', index]"
+          [class.selected]="index === selectedId">
+          {{player.name}}
        </button>
+       <span [hidden]="!(index === selectedId)"> <---Your Last Choice! </span>
       </li>
     </ul>
   `,
@@ -24,14 +33,36 @@ import { PlayersService } from '../service/players.service';
       text-align: center;
       margin: .2rem;
     }
+    .selected {
+      color: red;
+      transition: width .5s;
+    }
+    .selected:hover {
+      width: 30%;
+      text-align: center;
+    }
   `]
 })
 export class PlayersListComponent implements OnInit {
   players$: Observable<Player[]>;
-  constructor(private playersService: PlayersService) {}
+  selectedId: number;
+  constructor(
+    private playersService: PlayersService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
-    this.players$ = this.playersService.getPlayes();
+    // this.players$ = this.route.paramMap()
+    // .switchMap((params: ParamMap) => this.playersService.getPlayers)
+    this.players$ = this.playersService.getPlayers();
+    this.route.paramMap.subscribe((param: ParamMap) => console.log(param.keys));
+    this.players$ = this.route.paramMap.pipe(
+      switchMap((params: ParamMap) => {
+        // (+) before `params.get()` turns the string into a number
+        this.selectedId = Number(params.get('id'));
+        console.log(this.selectedId);
+        return this.playersService.getPlayers();
+      })
+    );
   }
-
 }

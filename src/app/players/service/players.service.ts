@@ -15,7 +15,7 @@ export class PlayersService {
     this.players = Players;
   }
 
-  getPlayes(): Observable<Player[]> {
+  getPlayers(): Observable<Player[]> {
     return Observable.of(this.players);
   }
 
