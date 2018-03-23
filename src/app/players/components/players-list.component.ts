@@ -60,7 +60,6 @@ export class PlayersListComponent implements OnInit {
       switchMap((params: ParamMap) => {
         // (+) before `params.get()` turns the string into a number
         this.selectedId = Number(params.get('id'));
-        console.log(this.selectedId);
         return this.playersService.getPlayers();
       })
     );

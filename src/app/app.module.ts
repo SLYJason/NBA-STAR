@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { PlayersModule } from './players/players.module';
 import { PlayersRoutingModule } from './players/players-routing.module';
@@ -21,6 +22,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     HttpClientModule,
     PlayersModule,
+    BrowserAnimationsModule,
     AppRoutingModule  // this is root routing module, must be imported last.
   ],
   providers: [],

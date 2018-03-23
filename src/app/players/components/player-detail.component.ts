@@ -1,9 +1,10 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ChangeDetectionStrategy, HostBinding } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 import { Player } from '../models/player.model';
 
 import { PlayersService } from '../service/players.service';
+import { slideInDownAnimation } from '../../animation';
 
 import { Observable } from 'rxjs/Observable';
 import { switchMap, map } from 'rxjs/operators';
@@ -17,9 +18,13 @@ import { switchMap, map } from 'rxjs/operators';
       <button class="btn btn-warning" (click)="gotoPlayers($event)">Back</button>
     </p>
   `,
-  styles: []
+  styles: [],
+  animations: [ slideInDownAnimation ]
 })
 export class PlayerDetailComponent implements OnInit {
+  @HostBinding('@routeAnimation') routeAnimation = true;
+  @HostBinding('style.display')   display = 'block';
+  @HostBinding('style.position')  position = 'absolute';
   player$: Observable<Player>;
   playerId: string;
 
