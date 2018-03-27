@@ -46,7 +46,7 @@ export class PlayerDetailComponent implements OnInit {
   }
   gotoPlayers(player) {
     const playerId = player ? player.id : null;
-    this.router.navigate(['/players-list', { id: this.playerId}])
+    this.router.navigate(['/players-list', { id: this.playerId}], { relativeTo: this.route })
   }
 
 }

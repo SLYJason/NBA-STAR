@@ -7,8 +7,10 @@
 <nav class="container">
   <button [routerLink]="['/all-star']" routerLinkActive="active" class="btn btn-primary">NBA All Star</button>
   <button [routerLink]="['/players-list']" routerLinkActive="active" class="btn btn-primary">Heroes</button>
+  <button [routerLink]="[{ outlets: { popup: ['compose'] } }]" routerLinkActive="active" class="btn btn-primary">Contact</button>
 </nav>
 <hr>
 <div class="container">
   <router-outlet></router-outlet>
+  <router-outlet name="popup"></router-outlet>
 </div>

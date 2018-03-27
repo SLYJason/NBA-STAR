@@ -1,11 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-all-star',
   template: `
-    <p>
-      all-star works!
-    </p>
+    <h2>NBA ALL STAR</h2>
+    <router-outlet></router-outlet>
   `,
   styles: []
 })
