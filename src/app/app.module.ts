@@ -4,7 +4,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { PlayersModule } from './players/players.module';
-import { PlayersRoutingModule } from './players/players-routing.module';
+import { AdminModule } from './admin/admin.module';
 
 import { AppRoutingModule } from './app-routing.module';
 
@@ -22,6 +22,7 @@ import { AppComponent } from './app.component';
     BrowserModule,
     HttpClientModule,
     PlayersModule,
+    AdminModule,
     BrowserAnimationsModule,
     AppRoutingModule  // this is root routing module, must be imported last.
   ],
