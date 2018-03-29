@@ -10,7 +10,7 @@ export class AuthService {
 
   login(): Observable<boolean> {
     return of(true).pipe(
-      delay(2000),
+      delay(2000), // simulate jwt token send to the server;
       tap(() => this.isLoggedIn = true)
     )
   }
