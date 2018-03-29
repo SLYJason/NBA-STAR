@@ -11,11 +11,18 @@ export class AuthService {
   login(): Observable<boolean> {
     return of(true).pipe(
       delay(2000), // simulate jwt token send to the server;
-      tap(() => this.isLoggedIn = true)
+      tap(() =>  {
+        this.autoLogout();
+        return this.isLoggedIn = true;
+      })
     )
   }
 
   logout(): void {
     this.isLoggedIn = false;
+  }
+  // simulate jwt token will expire in 3 second after login.
+  autoLogout() {
+    setTimeout(() => this.isLoggedIn = false, 5000);
   }
 }
