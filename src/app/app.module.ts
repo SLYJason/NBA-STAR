@@ -9,6 +9,7 @@ import { AdminModule } from './admin/admin.module';
 import { AppRoutingModule } from './app-routing.module';
 
 import { PageNotFoundComponent } from './page-not-found.component';
+import { AuthGuard } from './auth.guard';
 
 import { AppComponent } from './app.component';
 
@@ -26,7 +27,7 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     AppRoutingModule  // this is root routing module, must be imported last.
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

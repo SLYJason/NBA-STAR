@@ -55,7 +55,7 @@ export class PlayersListComponent implements OnInit {
     // this.players$ = this.route.paramMap()
     // .switchMap((params: ParamMap) => this.playersService.getPlayers)
     this.players$ = this.playersService.getPlayers();
-    this.route.paramMap.subscribe((param: ParamMap) => console.log(param.keys));
+    // this.route.paramMap.subscribe((param: ParamMap) => console.log(param.keys));
     this.players$ = this.route.paramMap.pipe(
       switchMap((params: ParamMap) => {
         // (+) before `params.get()` turns the string into a number

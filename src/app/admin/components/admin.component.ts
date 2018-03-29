@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
   template: `
     <h3>ADMIN</h3>
     <nav>
-      <button routerLink="./" routerLinkActive="active"
+      <button routerLink="./dashboard" routerLinkActive="active"
          [routerLinkActiveOptions]="{ exact: true }" class="btn btn-info">Dashboard</button>
       <button routerLink="./crises" routerLinkActive="active" class="btn btn-info">Manage Crises</button>
       <button routerLink="./heroes" routerLinkActive="active" class="btn btn-info">Manage Heroes</button>
