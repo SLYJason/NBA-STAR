@@ -12,12 +12,15 @@ import { PageNotFoundComponent } from './page-not-found.component';
 import { AuthGuard } from './auth.guard';
 
 import { AppComponent } from './app.component';
+import { AuthService } from './auth.service';
+import { LoginComponent } from './login.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +30,7 @@ import { AppComponent } from './app.component';
     BrowserAnimationsModule,
     AppRoutingModule  // this is root routing module, must be imported last.
   ],
-  providers: [AuthGuard],
+  providers: [AuthGuard, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
