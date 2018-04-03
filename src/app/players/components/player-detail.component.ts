@@ -28,9 +28,9 @@ export class PlayerDetailComponent implements OnInit {
   player$: Observable<Player>;
   playerId: string;
 
-  constructor(private route: ActivatedRoute, 
-    private router: Router,
-    private playersService: PlayersService) {}
+  constructor(private route: ActivatedRoute,
+              private router: Router,
+              private playersService: PlayersService) {}
 
   ngOnInit() {
     this.player$ = this.route.paramMap.pipe(
