@@ -12,7 +12,7 @@ export class AuthService {
     return of(true).pipe(
       delay(2000), // simulate jwt token send to the server;
       tap(() =>  {
-        this.autoLogout(); // simulate jwt token will expire in 3 second after login.
+        // this.autoLogout(); // simulate jwt token will expire in 3 second after login.
         return this.isLoggedIn = true;
       })
     );
