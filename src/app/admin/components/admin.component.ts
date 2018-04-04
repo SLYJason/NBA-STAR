@@ -7,8 +7,7 @@ import { Component, OnInit } from '@angular/core';
     <nav>
       <button routerLink="./dashboard" routerLinkActive="active"
          [routerLinkActiveOptions]="{ exact: true }" class="btn btn-info">Dashboard</button>
-      <button routerLink="./crises" routerLinkActive="active" class="btn btn-info">Manage Crises</button>
-      <button routerLink="./heroes" routerLinkActive="active" class="btn btn-info">Manage Heroes</button>
+      <button routerLink="./top-five" routerLinkActive="active" class="btn btn-info">Top Five</button>
     </nav>
     <router-outlet></router-outlet>`,
   styles: [``]

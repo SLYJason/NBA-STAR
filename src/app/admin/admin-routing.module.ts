@@ -5,7 +5,7 @@ import { AdminComponent } from './components/admin.component';
 import { AdminDashboardComponent } from './components/admin-dashboard.component';
 
 import { AuthGuard } from '../auth.guard';
-import {CrisisDetailComponent} from './components/crisis-detail.component';
+import { TopFiveDetailComponent } from './components/top-five-detail.component';
 
 const adminRoutes: Routes = [
   {
@@ -19,7 +19,7 @@ const adminRoutes: Routes = [
         children: [{
           path: 'dashboard', component: AdminDashboardComponent
         }, {
-          path: 'crises', component: CrisisDetailComponent
+          path: 'top-five', component: TopFiveDetailComponent
         }]
       }]
   }];
