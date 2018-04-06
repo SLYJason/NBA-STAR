@@ -6,11 +6,11 @@ import { Router } from '@angular/router';
 
 import { PlayersModule } from './players/players.module';
 import { AdminModule } from './admin/admin.module';
+import { SharedModule } from './shared/shared.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { LoginRoutingModule } from './login-routing.module';
 
-import { PageNotFoundComponent } from './shared/page-not-found/page-not-found.component';
 import { AuthGuard } from './auth.guard';
 
 import { AppComponent } from './app.component';
@@ -21,7 +21,6 @@ import { LoginComponent } from './login.component';
 @NgModule({
   declarations: [
     AppComponent,
-    PageNotFoundComponent,
     LoginComponent
   ],
   imports: [
@@ -29,6 +28,7 @@ import { LoginComponent } from './login.component';
     HttpClientModule,
     PlayersModule,
     AdminModule,
+    SharedModule,
     BrowserAnimationsModule,
     LoginRoutingModule,
     AppRoutingModule  // this is root routing module, must be imported last.
