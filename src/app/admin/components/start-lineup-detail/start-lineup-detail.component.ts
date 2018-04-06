@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
-  selector: 'app-top-five-detail',
+  selector: 'app-start-lineup-detail',
   template: `
     <section class="container">
       <h3>{{editName}}</h3>
@@ -22,7 +22,7 @@ import {Router} from '@angular/router';
     }
   `]
 })
-export class TopFiveDetailComponent implements OnInit {
+export class StartLineupDetailComponent implements OnInit {
   editName: string;
   constructor(private router: Router) { }
 

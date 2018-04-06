@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-admin-dashboard',
+  selector: 'app-dashboard',
   template: `
     <p>
-      admin-dashboard works!
+      dashboard works!
     </p>
   `,
   styles: []
 })
-export class AdminDashboardComponent implements OnInit {
+export class DashboardComponent implements OnInit {
 
   constructor() { }
 

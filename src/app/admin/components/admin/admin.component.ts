@@ -6,11 +6,15 @@ import { Component, OnInit } from '@angular/core';
     <h3>ADMIN</h3>
     <nav>
       <button routerLink="./dashboard" routerLinkActive="active"
-         [routerLinkActiveOptions]="{ exact: true }" class="btn btn-info">Dashboard</button>
-      <button routerLink="./top-five" routerLinkActive="active" class="btn btn-info">Top Five</button>
+              [routerLinkActiveOptions]="{ exact: true }" class="btn btn-info">Dashboard</button>
+      <button routerLink="./start-lineup" class="btn btn-info">Start Lineup</button>
     </nav>
     <router-outlet></router-outlet>`,
-  styles: [``]
+  styles: [`
+    .active {
+      background-color: red;
+    }
+  `]
 })
 export class AdminComponent implements OnInit {
 

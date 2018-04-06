@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { AdminComponent } from './components/admin.component';
-import { AdminDashboardComponent } from './components/admin-dashboard.component';
+import { AdminComponent } from './components/admin/admin.component';
 
 import { AuthGuard } from '../auth.guard';
-import { TopFiveDetailComponent } from './components/top-five-detail.component';
+import { StartLineupDetailComponent } from './components/start-lineup-detail/start-lineup-detail.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 const adminRoutes: Routes = [
   {
@@ -16,10 +16,12 @@ const adminRoutes: Routes = [
       {
         path: '',
         canActivateChild: [AuthGuard],
-        children: [{
-          path: 'dashboard', component: AdminDashboardComponent
-        }, {
-          path: 'top-five', component: TopFiveDetailComponent
+        children: [
+          {
+          path: 'dashboard', component: DashboardComponent
+          },
+          {
+          path: 'start-lineup', component: StartLineupDetailComponent
         }]
       }]
   }];
