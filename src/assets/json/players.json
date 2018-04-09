@@ -6,6 +6,24 @@
     "description": "He won four scoring titles and became a touchstone for a generation of fans who loved his defiance and heart as much as his crossover."
   },
   {
+    "name": "Dirk Nowitzki",
+    "summary": "19 years, 1 championship",
+    "team": "Dallas Mavericks",
+    "description": " A 12-time All-NBA selection, he willed the Dallas Mavericks to their lone title, upsetting LeBron James and the Miami Heat in 2011."
+  },
+  {
+    "name": "Dwyane Wade",
+    "summary": "14 years, 3 championships",
+    "team": " Miami Heat, Chicago Bulls, Cleveland Cavaliers",
+    "description": " His first of three titles came in 2006, when Wade brought the Heat back from a 2-0 deficit and was named Finals MVP."
+  },
+  {
+    "name": "Jason Kidd",
+    "summary": "19 years, 1 championship",
+    "team": "Dallas Mavericks, Phoenix Suns, New Jersey Nets, Dallas Mavericks, New York Knicks",
+    "description": "The only player in NBA history to record more than 15,000 points, 10,000 assists and 7,000 rebounds."
+  },
+  {
     "name": "Kevin Durant",
     "summary": "10 years, 1 championship",
     "team": "Oklahoma Thunders, Golden State Warriors",
@@ -30,6 +48,18 @@
     "description": "He is simply the greatest preps-to-pros player, edging out Kobe Bryant, Kevin Garnett and Moses Malone. He’s been to more NBA Finals than Michael Jordan (8 vs. 6) and had less of a roster in at least three of those Finals (bless Boobie Gibson’s heart in 2007)."
   },
   {
+    "name": "Paul Pierce",
+    "summary": "19 years, 1 championship",
+    "team": "Boston Celtics, Brooklyn Nets, Washington Wizards, Los Angeles Clippers",
+    "description": "He actually played two more seasons in Boston (15) than Larry Bird did"
+  },
+  {
+    "name": "Reggie Miller",
+    "summary": "18 years, 0 championships",
+    "team": "Inidana Pacers",
+    "description": "Beyond the 3-point bomb he shot with aplomb, beyond his ability to curl around three screens to free his 6-foot-7, corn-silk-thin frame for a shot, Miller’s greatest trait was his ability to crawl beneath an opponent’s skin."
+  },
+  {
     "name": "Ray Allen",
     "summary": "18 years, 2 championships",
     "team": "Milwaukee Bucks, Seattle SuperSonics, Boston Celtics, Miami Heat",
@@ -40,6 +70,12 @@
     "summary": "8 years, 2 championships",
     "team": "Golden State Warriors",
     "description": "He’s won a scoring title, two MVPs and two NBA championships — and he’s just 29."
+  },
+  {
+    "name": "Steve Nash",
+    "summary": "18 years, 0 championships",
+    "team": "Phoenix Suns, Dallas Mavericks, Phoenix Suns, Los Angeles Lakers",
+    "description": "A two-time MVP, he led the NBA in assists five times and for four seasons joined the exclusive 90-50-40 Club (90 percent from the free-throw line, 50 percent field goal accuracy, 40 percent on 3-pointers)."
   },
   {
     "name": "Tim Duncan",
