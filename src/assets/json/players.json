@@ -3,84 +3,98 @@
     "name": "Allen Iverson",
     "summary": "14 years, 0 championships",
     "team": "	Philadelphia 76ers, Denver Nuggets, Detroit Pistons, Memphis Grizzlies, Philadelphia 76ers",
+    "stats": "Points:26.7;Rebounds:3.7;Assists:6.2;Steals:2.2;Blocks:0.2",
     "description": "He won four scoring titles and became a touchstone for a generation of fans who loved his defiance and heart as much as his crossover."
   },
   {
     "name": "Dirk Nowitzki",
     "summary": "19 years, 1 championship",
     "team": "Dallas Mavericks",
+    "stats": "Points:21.7;Rebounds:7.8;Assists:2.5;Steals:0.8;Blocks:0.9",
     "description": " A 12-time All-NBA selection, he willed the Dallas Mavericks to their lone title, upsetting LeBron James and the Miami Heat in 2011."
   },
   {
     "name": "Dwyane Wade",
     "summary": "14 years, 3 championships",
     "team": " Miami Heat, Chicago Bulls, Cleveland Cavaliers",
+    "stats": "Points:23.3;Rebounds:4.8;Assists:5.7;Steals:1.6;Blocks:0.9",
     "description": " His first of three titles came in 2006, when Wade brought the Heat back from a 2-0 deficit and was named Finals MVP."
   },
   {
     "name": "Jason Kidd",
     "summary": "19 years, 1 championship",
     "team": "Dallas Mavericks, Phoenix Suns, New Jersey Nets, Dallas Mavericks, New York Knicks",
+    "stats": "Points:12.6;Rebounds:6.3;Assists:8.7;Steals:1.9;Blocks:0.3",
     "description": "The only player in NBA history to record more than 15,000 points, 10,000 assists and 7,000 rebounds."
   },
   {
     "name": "Kevin Durant",
     "summary": "10 years, 1 championship",
     "team": "Oklahoma Thunders, Golden State Warriors",
-    "description": "Called “The Slim Reaper,” “The Durantula” or just “K.D.,” Durant has established himself as one of the top three players of his generation alongside teammate Stephen Curry and LeBron James."
+    "stats": "Points:27.2;Rebounds:7.2;Assists:3.8;Steals:1.2;Blocks:1",
+    "description": "Durant has established himself as one of the top three players of his generation alongside teammate Stephen Curry and LeBron James."
   },
   {
     "name": "Kevin Garnett",
     "summary": "21 years, 1 championship",
     "team": "Boston Celtics, Minnesota Timberwolves",
-    "description": "With 15 All-Star selections in 21 years, four straight rebounding titles from 2004-07 and easily the most lethal sneer in league history, K.G. was talent, ’tude and everything he was predicted to be when he entered the league in 1995."
+    "stats": "Points:17.8;Rebounds:10;Assists:3.7;Steals:1.3;Blocks:1.4",
+    "description": "With 15 All-Star selections in 21 years, four straight rebounding titles from 2004-07 and easily the most lethal sneer in league history."
   },
   {
     "name": "Kobe Bryant",
     "summary": "20 years, 5 championships",
     "team": "Los Angels Lakers",
+    "stats": "Points:25;Rebounds:5.2;Assists:4.7;Steals:1.4;Blocks:0.5",
     "description": "For 11 of his 20 seasons he was first-team All-NBA. The biggest knock on the Black Mamba is he was the second-best player on the Los Angeles Lakers for three of his five titles."
   },
   {
     "name": "Lebron James",
     "summary": "14 years, 3 championships",
     "team": "Cleveland Cavaliers, Miami Heat",
-    "description": "He is simply the greatest preps-to-pros player, edging out Kobe Bryant, Kevin Garnett and Moses Malone. He’s been to more NBA Finals than Michael Jordan (8 vs. 6) and had less of a roster in at least three of those Finals (bless Boobie Gibson’s heart in 2007)."
+    "stats": "Points:27.1;Rebounds:7.3;Assists:7;Steals:1.6;Blocks:0.8",
+    "description": "He is simply the greatest preps-to-pros player, edging out Kobe Bryant, Kevin Garnett and Moses Malone."
   },
   {
     "name": "Paul Pierce",
     "summary": "19 years, 1 championship",
     "team": "Boston Celtics, Brooklyn Nets, Washington Wizards, Los Angeles Clippers",
+    "stats": "Points:19.7;Rebounds:5.6;Assists:3.5;Steals:1.3;Blocks:0.6",
     "description": "He actually played two more seasons in Boston (15) than Larry Bird did"
   },
   {
     "name": "Reggie Miller",
     "summary": "18 years, 0 championships",
     "team": "Inidana Pacers",
-    "description": "Beyond the 3-point bomb he shot with aplomb, beyond his ability to curl around three screens to free his 6-foot-7, corn-silk-thin frame for a shot, Miller’s greatest trait was his ability to crawl beneath an opponent’s skin."
+    "stats": "Points:18.2;Rebounds:3;Assists:3;Steals:1.1;Blocks:0.2",
+    "description": "Beyond the 3-point bomb he shot with aplomb, Miller’s greatest trait was his ability to crawl beneath an opponent’s skin."
   },
   {
     "name": "Ray Allen",
     "summary": "18 years, 2 championships",
     "team": "Milwaukee Bucks, Seattle SuperSonics, Boston Celtics, Miami Heat",
-    "description": "He broke Reggie Miller’s all-time 3-point record in Boston (with 2,973 for his career, Stephen Curry is still more than 1,000 behind), broke Kevin Garnett’s and Paul Pierce’s hearts when he left the Boston Celtics for Miami, and he devastated San Antonio with a 3-pointer to tie Game 6 of the 2013 Finals, the most clutch shot in Finals history."
+    "stats": "Points:18.9;Rebounds:4.1;Assists:3.4;Steals:1.1;Blocks:0.2",
+    "description": "He broke Reggie Miller’s all-time 3-point record in Boston (with 2,973 for his career, Stephen Curry is still more than 1,000 behind)."
   },
   {
     "name": "Stephen Curry",
     "summary": "8 years, 2 championships",
     "team": "Golden State Warriors",
+    "stats": "Points:22.8;Rebounds:4.4;Assists:6.8;Steals:1.8;Blocks:0.2",
     "description": "He’s won a scoring title, two MVPs and two NBA championships — and he’s just 29."
   },
   {
     "name": "Steve Nash",
     "summary": "18 years, 0 championships",
     "team": "Phoenix Suns, Dallas Mavericks, Phoenix Suns, Los Angeles Lakers",
-    "description": "A two-time MVP, he led the NBA in assists five times and for four seasons joined the exclusive 90-50-40 Club (90 percent from the free-throw line, 50 percent field goal accuracy, 40 percent on 3-pointers)."
+    "stats": "Points:14.3;Rebounds:3;Assists:8.5;Steals:0.7;Blocks:0.1",
+    "description": "A two-time MVP, he led the NBA in assists five times and for four seasons joined the exclusive 90-50-40 Club."
   },
   {
     "name": "Tim Duncan",
     "summary": "19 years, 5 championships",
     "team": "San Antonio Spurs",
-    "description": "He is the greatest power forward in the history of the game. A five-time NBA champ, two-time MVP and three-time Finals MVP, he was the only player to be selected to both the All-NBA and All-Defensive teams in each of his first 13 seasons."
+    "stats": "Points:19;Rebounds:10.8;Assists:3;Steals:0.7;Blocks:2.2",
+    "description": "A five-time NBA champ, two-time MVP and three-time Finals MVP, he was the only player to be selected to both the All-NBA and All-Defensive teams in each of his first 13 seasons."
   }
 ]
