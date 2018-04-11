@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
-import { CommonModule }   from '@angular/common';
+import { CommonModule } from '@angular/common';
 
-import { AllStarComponent } from './components/all-star.component';
-import { PlayerDetailComponent } from './components/player-detail.component';
-import { PlayersListComponent } from './components/players-list.component';
+import { AllStarComponent } from './components/all-star/all-star.component';
+import { PlayerDetailComponent } from './components/player-detail/player-detail.component';
+import { PlayersListComponent } from './components/player-list/players-list.component';
 
 import { PlayersRoutingModule } from './players-routing.module';
 

@@ -1,10 +1,10 @@
 import { Component, OnInit, ChangeDetectionStrategy, HostBinding } from '@angular/core';
 import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
-import { Player } from '../models/player.model';
+import { Player } from '../../models/player.model';
 
-import { PlayersService } from '../services/players.service';
-import { slideInDownAnimation } from '../../animation';
+import { PlayersService } from '../../services/players.service';
+import { slideInDownAnimation } from '../../../animation';
 
 import { Observable } from 'rxjs/Observable';
 import { switchMap, map } from 'rxjs/operators';
@@ -46,7 +46,7 @@ export class PlayerDetailComponent implements OnInit {
   }
   gotoPlayers(player) {
     const playerId = player ? player.id : null;
-    this.router.navigate(['/players-list', { id: this.playerId}], { relativeTo: this.route })
+    this.router.navigate(['./players-list', { id: this.playerId}], { relativeTo: this.route });
   }
 
 }

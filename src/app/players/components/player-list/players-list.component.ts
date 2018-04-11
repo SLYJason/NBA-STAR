@@ -1,28 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
-import { Player } from '../models/player.model';
-import { PlayersService } from '../services/players.service';
+import { Player } from '../../models/player.model';
+import { PlayersService } from '../../services/players.service';
 
 import { switchMap } from 'rxjs/operators';
-import { of } from 'rxjs/observable/of';
-import 'rxjs/Observable';
 
 @Component({
   selector: 'app-players-list',
   template: `
-    <p>NBA Players List</p>
-    <ul>
-      <li *ngFor="let player of (players$ | async); index as index">
-       <button
-          class="btn btn-primary" 
-          [routerLink]="['/player', index]"
-          [class.selected]="index === selectedId">
-          {{player.name}}
-       </button>
-       <span [hidden]="!(index === selectedId)"> <---Your Last Choice! </span>
-      </li>
-    </ul>
+    <section>
+      <p>NBA Players List</p>
+      <ul>
+        <li *ngFor="let player of (players$ | async); index as index">
+          <button
+            class="btn btn-primary"
+            [routerLink]="['/player', index]"
+            [class.selected]="index === selectedId">
+            {{player.name}}
+          </button>
+          <span [hidden]="!(index === selectedId)"> <---Your Last Choice! </span>
+        </li>
+      </ul>
+    </section>
   `,
   styles: [`
     ul {
