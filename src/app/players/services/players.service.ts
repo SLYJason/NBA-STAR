@@ -1,18 +1,21 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { Player } from '../models/player.model'
+import { Player } from '../models/player.model';
+
+import { PlayersUrlService } from './players-url.service';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
 
-import { Players } from '../../players';
 
 @Injectable()
 export class PlayersService {
   players;
 
-  constructor(private http: HttpClient) {
-    this.http.get('./assets/json/players.json', this.getRequestOptions()).subscribe(res => this.players = res);
+  constructor(
+    private http: HttpClient,
+    private playersUrlService: PlayersUrlService) {
+    this.http.get(`${this.playersUrlService.baseurl()}players.json`, this.getRequestOptions()).subscribe(res => this.players = res);
   }
 
   getPlayers(): Observable<Player[]> {

@@ -3,7 +3,7 @@ import { Router, ActivatedRoute, ParamMap } from '@angular/router';
 
 import { Player } from '../models/player.model';
 
-import { PlayersService } from '../service/players.service';
+import { PlayersService } from '../services/players.service';
 import { slideInDownAnimation } from '../../animation';
 
 import { Observable } from 'rxjs/Observable';

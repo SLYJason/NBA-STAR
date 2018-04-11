@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { Player } from '../models/player.model';
-import { PlayersService } from '../service/players.service';
+import { PlayersService } from '../services/players.service';
 
 import { switchMap } from 'rxjs/operators';
 import { of } from 'rxjs/observable/of';

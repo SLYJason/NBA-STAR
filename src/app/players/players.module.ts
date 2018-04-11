@@ -7,7 +7,7 @@ import { PlayersListComponent } from './components/players-list.component';
 
 import { PlayersRoutingModule } from './players-routing.module';
 
-import { PlayersService } from './service/players.service';
+import { PlayersService, PlayersUrlService } from './services';
 import { ComposeMessageComponent } from './components/compose-message.component';
 
 @NgModule({
@@ -21,6 +21,6 @@ import { ComposeMessageComponent } from './components/compose-message.component'
       PlayerDetailComponent,
       ComposeMessageComponent
     ],
-    providers: [ PlayersService ]
+    providers: [ PlayersService, PlayersUrlService ]
   })
   export class PlayersModule {}
