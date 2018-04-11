@@ -36,7 +36,7 @@ export class PlayerDetailComponent implements OnInit {
     this.player$ = this.route.paramMap.pipe(
       switchMap((params: ParamMap) => {
         this.playerId = params.get('id');
-        return this.playersService.getPlayer(this.playerId)
+        return this.playersService.getPlayer(this.playerId);
       })
     );
 

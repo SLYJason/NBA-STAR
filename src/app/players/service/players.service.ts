@@ -12,7 +12,7 @@ export class PlayersService {
   players;
 
   constructor(private http: HttpClient) {
-    this.players = Players;
+    this.http.get('./assets/json/players.json', this.getRequestOptions()).subscribe(res => this.players = res);
   }
 
   getPlayers(): Observable<Player[]> {
