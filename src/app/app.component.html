@@ -1,12 +1,27 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
 <app-header></app-header>
-<nav class="container">
-  <button [routerLink]="['/admin']" routerLinkActive="active" class="btn btn-primary">Admin</button>
-  <button [routerLink]="['/all-star']" routerLinkActive="active" class="btn btn-primary">NBA All Star</button>
-  <button [routerLink]="['/players-list']" routerLinkActive="active" class="btn btn-primary">NBA Players</button>
-  <button [routerLink]="[{ outlets: { popup: ['compose'] } }]" routerLinkActive="active" class="btn btn-primary">Contact</button>
+
+<nav class="container navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="#">NBA Players</a>
+  <div class="collapse navbar-collapse">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/admin']" routerLinkActive="active">Admin</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/all-star']" routerLinkActive="active">NBA All Star</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/players-list']" routerLinkActive="active">NBA Players</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="[{ outlets: { popup: ['compose'] } }]" routerLinkActive="active">Compose Message</a>
+      </li>
+    </ul>
+  </div>
 </nav>
+
 <hr>
 <div class="container">
   <router-outlet></router-outlet>
