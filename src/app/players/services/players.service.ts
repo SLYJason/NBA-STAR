@@ -6,6 +6,7 @@ import { PlayersUrlService } from './players-url.service';
 
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/observable/of';
+import { map } from 'rxjs/operators';
 
 
 @Injectable()
@@ -14,16 +15,16 @@ export class PlayersService {
 
   constructor(
     private http: HttpClient,
-    private playersUrlService: PlayersUrlService) {
-    this.http.get(`${this.playersUrlService.baseurl()}players.json`, this.getRequestOptions()).subscribe(res => this.players = res);
-  }
+    private playersUrlService: PlayersUrlService) {}
 
   getPlayers(): Observable<Player[]> {
-    return Observable.of(this.players);
+    return this.http.get<Player[]>(`${this.playersUrlService.baseurl()}players.json`, this.getRequestOptions());
   }
 
   getPlayer(id: string): Observable<Player> {
-    return Observable.of(this.players[Number(id)]);
+    return this.getPlayers().pipe(
+      map(val => val[id])
+    );
   }
 
   private getRequestOptions() {

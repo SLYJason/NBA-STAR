@@ -25,6 +25,13 @@ import { switchMap } from 'rxjs/operators';
     </section>
   `,
   styles: [`
+    :host {
+      overflow: scroll;
+      margin-bottom: 2rem;
+    }
+    section {
+      z-index: 2;
+    }
     .title {
       text-align: center;
     }

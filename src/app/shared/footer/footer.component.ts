@@ -9,10 +9,9 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
     :host{
       display: flex;
       justify-content: center;
-      position: absolute;
-      bottom: 0;
       background-color: #9e9e9e;
-      height: 10rem;
+      bottom: 0;
+      height: 3rem;
       width: 100vw;
     }
   `],
