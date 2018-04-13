@@ -21,11 +21,11 @@
       "styles": [
         "styles.css",
         "../node_modules/bootstrap/dist/css/bootstrap.min.css",
-        "../node_modules/bootstrap/dist/js/bootstrap.js",
         "../node_modules/material-design-lite/material.min.css"
       ],
       "scripts": [
-        "../node_modules/material-design-lite/material.min.js"
+        "../node_modules/material-design-lite/material.min.js",
+        "../node_modules/bootstrap/dist/js/bootstrap.js"
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
