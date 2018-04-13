@@ -3,13 +3,15 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HeaderComponent } from './header/header.component';
 import { InputSearchComponent } from './input-search/input-search.component';
 import { FooterComponent } from './footer/footer.component';
+import { IconComponent } from './icon/icon.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     InputSearchComponent,
     FooterComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    IconComponent
   ],
   exports: [
     HeaderComponent,
