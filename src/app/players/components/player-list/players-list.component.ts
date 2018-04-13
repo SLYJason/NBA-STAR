@@ -11,10 +11,13 @@ import { switchMap } from 'rxjs/operators';
   template: `
     <section>
       <h4 class="title">NBA Players List</h4>
-      <div class="list-group">
+      <div class="detail">
+        <router-outlet></router-outlet>
+      </div>
+      <div class="list-group list">
         <a *ngFor="let player of (players$ | async); index as index"
            class="list-group-item list-group-item-action list-item"
-           [routerLink]="['/player', index]"
+           [routerLink]="['player', index]"
            [class.selected]="index === selectedId">
           {{player.name}}
         </a>
@@ -25,10 +28,19 @@ import { switchMap } from 'rxjs/operators';
     .title {
       text-align: center;
     }
+    .list {
+      display: flex;
+    }
     .list-item {
+      display: inline-block;
       width: 30%;
       text-align: center;
       font-weight: bold;
+    }
+    .detail {
+      position: absolute;
+      left: 40%;
+      width: 50%;
     }
   `]
 })

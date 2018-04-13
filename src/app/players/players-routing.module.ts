@@ -13,11 +13,11 @@ const playersRoutes: Routes = [
     },
     {
       path: 'players-list',
-      component: PlayersListComponent
-    },
-    {
-      path: 'player/:id',
-      component: PlayerDetailComponent
+      component: PlayersListComponent,
+      children: [{
+        path: 'player/:id',
+        component: PlayerDetailComponent
+      }]
     },
     {
       path: 'compose',

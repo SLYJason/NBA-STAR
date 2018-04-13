@@ -18,7 +18,11 @@ import { switchMap, map } from 'rxjs/operators';
       <button class="btn btn-warning" (click)="gotoPlayers($event)">Back</button>
     </p>
   `,
-  styles: [],
+  styles: [`
+    :host{
+      display: inline-block;
+    }
+  `],
   animations: [ slideInDownAnimation ]
 })
 export class PlayerDetailComponent implements OnInit {
