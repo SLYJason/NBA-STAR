@@ -1,19 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnChanges} from '@angular/core';
 
 @Component({
   selector: 'app-icon',
   template: `
-    <p>
-      icon works!
-    </p>
+    <svg><use [attr.xlink:href]="iconPath"/></svg>
   `,
   styles: []
 })
-export class IconComponent implements OnInit {
-
-  constructor() { }
-
-  ngOnInit() {
+export class IconComponent implements OnChanges {
+  @Input() iconPath: string;
+  ngOnChanges() {
+    console.log(this.iconPath);
   }
-
 }

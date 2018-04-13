@@ -3,9 +3,7 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
 @Component({
   selector: 'app-footer',
   template: `
-    <h1>
-      footer works!
-    </h1>
+    <app-icon [iconPath]="github"></app-icon>
   `,
   styles: [`
     :host{
@@ -21,5 +19,5 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class FooterComponent {
-
+  github = './assets/svg/github';
 }

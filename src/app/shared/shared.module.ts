@@ -8,13 +8,14 @@ import { IconComponent } from './icon/icon.component';
 @NgModule({
   declarations: [
     HeaderComponent,
+    IconComponent,
     InputSearchComponent,
     FooterComponent,
-    PageNotFoundComponent,
-    IconComponent
+    PageNotFoundComponent
   ],
   exports: [
     HeaderComponent,
+    IconComponent,
     InputSearchComponent,
     FooterComponent,
     PageNotFoundComponent
