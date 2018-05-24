@@ -1,0 +1,10 @@
+{
+  "dest": "src/assets",
+  "mode": {
+    "symbol": {
+      "dest": ".",
+      "sprite": "icons.svg",
+      "example": true
+    }
+  }
+}
