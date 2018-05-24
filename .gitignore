@@ -5,6 +5,8 @@
 /dist-server
 /tmp
 /out-tsc
+src/assets/icons.svg
+sprite.symbol.html
 
 # dependencies
 /node_modules
