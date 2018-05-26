@@ -6,12 +6,12 @@ export const SELECT_CURRENT_PLAYER = '[players] select current player';
 
 export class LoadAllPlayers implements Action {
   readonly type = LOAD_ALL_PLAYERS;
-  constructor(public players: Player[]) {}
+  constructor(public payload: Player[]) {}
 }
 
 export class SelectCurrentPlayer implements Action {
   readonly type =  SELECT_CURRENT_PLAYER;
-  constructor(public player: Player) {}
+  constructor(public payload: Player) {}
 }
 
 export type Actions =
