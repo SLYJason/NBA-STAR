@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { Router } from '@angular/router';
+import { StoreModule} from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
 
 import { PlayersModule } from './players/players.module';
 import { AdminModule } from './admin/admin.module';
@@ -17,6 +19,7 @@ import { AppComponent } from './app.component';
 import { AuthService } from './auth.service';
 import { LoginComponent } from './login.component';
 
+const metaReducers = [];
 
 @NgModule({
   declarations: [
@@ -31,6 +34,7 @@ import { LoginComponent } from './login.component';
     SharedModule,
     BrowserAnimationsModule,
     LoginRoutingModule,
+    StoreModule.forRoot({}, {metaReducers}),
     AppRoutingModule  // this is root routing module, must be imported last.
   ],
   providers: [AuthGuard, AuthService],

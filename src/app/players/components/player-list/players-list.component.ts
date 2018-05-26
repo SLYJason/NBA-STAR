@@ -2,7 +2,7 @@ import { Component, OnInit, ChangeDetectorRef } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
 import { Player } from '../../models/player.model';
-import { PlayersService } from '../../services/players.service';
+import { PlayersService,  PlayerStoreService} from '../../services';
 
 import { switchMap } from 'rxjs/operators';
 
@@ -57,7 +57,7 @@ export class PlayersListComponent implements OnInit {
   constructor(
     private playersService: PlayersService,
     private route: ActivatedRoute,
-    private cd: ChangeDetectorRef
+    private playerStore: PlayerStoreService
   ) {}
 
   ngOnInit() {
@@ -65,6 +65,7 @@ export class PlayersListComponent implements OnInit {
     // .switchMap((params: ParamMap) => this.playersService.getPlayers)
     // this.players$ = this.playersService.getPlayers();
     // this.route.paramMap.subscribe((param: ParamMap) => console.log(param.keys));
+    this.playerStore.loadAllPlayers();
     this.players$ = this.route.paramMap.pipe(
       switchMap((params: ParamMap) => {
         // (+) before `params.get()` turns the string into a number

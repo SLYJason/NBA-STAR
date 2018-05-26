@@ -12,12 +12,15 @@ export class PlayerStoreService {
 
   constructor(private store: Store<State>) { }
 
+  loadAllPlayers(): void {
+    this.store.dispatch(new Actions.LoadAllPlayers());
+  }
+
+  loadAllPlayersSuccess(players: Player[]): void {
+    this.store.dispatch(new Actions.LoadAllPlayersSuccess(players));
+  }
+
   getAllPlayers(): Observable<Player[]> {
     return this.store.select(PlayersSelectors.getAllPlayers);
   }
-
-  loadAllPlayers(players: Player[]): void {
-    this.store.dispatch(new Actions.LoadAllPlayers(players));
-  }
-
 }
